@@ -619,7 +619,7 @@
     }
     .logo1{
         grid-area: logo;
-        background-color: black;
+        background-color: transparent;
     }
     .frase{
         grid-area: frase;
