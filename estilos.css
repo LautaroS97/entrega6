@@ -1,0 +1,799 @@
+/*reseteo*/
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: black;
+    text-decoration: none;
+}
+/*Resolución óptima para 1920x1080*/
+@media screen and (max-width:1920px){
+    /*título de la página*/
+    h1{
+        background-color: rgb(245, 159, 21);
+        color: black;
+        font-family: 'Cinzel', serif;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font-size: 4rem;
+        padding-top: 1.5rem;
+    }
+    /*botón para comprar*/
+    .buybuttom{
+        background-color: rgb(245, 159, 21);
+        width: 15rem;
+        height: 5rem;
+        margin: 1rem;
+        text-align: center;
+        border-radius: 5rem;
+        font-size: 2rem;
+        padding: 0.8rem;
+        color: black;
+        border-color: black;
+        border-style: double;
+        border-width: 0.5rem;
+        font-family: 'Cinzel', serif;
+    }
+    .buybuttom:hover{
+        border-color: rgb(245, 159, 21);
+        border-width: 8px;
+        border-style: solid;
+        background-color: black;
+        color: rgb(245, 159, 21);
+    }
+    /*menú de navegación*/
+    .title{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 25%;
+    }
+    .encabezado{
+        width: 100%;
+    }
+    .encabezado:hover{
+        opacity: 75%;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    .buttomcontent{
+        background-color: rgb(245, 159, 21);
+        width: 11.5rem;
+        height: 4rem;
+        margin: 1rem;
+        padding: 0.7rem;
+        margin-top: 2rem;
+        text-align: center;
+        border-radius: 5rem;
+        font-size: x-large;
+        color: black;
+        border-color: black;
+        border-style: double;
+        border-width: 0.5rem;
+        font-family: 'Cinzel', serif;
+    }
+    .buttomcontent:hover{
+        border-color: rgb(245, 159, 21);
+        border-width: 5px;
+        border-style: solid;
+        background-color: black;
+        color: rgb(245, 159, 21);
+    }
+    /*página principal*/
+    .principal{
+        max-width: 1920px;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo titulo titulo"
+        "portada portada portada portada frase logo"
+        "portada portada portada portada frase logo"
+        "portada portada portada portada frase libro"
+        "portada portada portada portada frase libro"
+        "portada portada portada portada frase libro"
+        "portada portada portada portada frase comprar";
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        margin: 1rem;
+        height: 100vh;
+    }
+    .title1{
+        grid-area: titulo;
+        background-color: white;
+    }
+    .logo1{
+        grid-area: logo;
+        background-color: transparent;
+    }
+    .frase{
+        grid-area: frase;
+        background: linear-gradient(to bottom, rgb(245, 159, 21), black);
+    }
+    .illustration{
+        grid-area: portada;
+        background-color: black;
+    }
+    .illustration img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .logo1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: girar 20s linear infinite;
+        background-color: transparent;
+    }
+    @keyframes girar{
+        from{}
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    .buyphoto{
+        grid-area: libro;
+        background-color: black;
+    }
+    .buyphoto img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center center;
+    }
+    .buylink{
+        grid-area: comprar;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    /*sinopsis*/
+    .sinopsis{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo titulo titulo"
+        "info info info info info logo"
+        "info info info info info logo"
+        "video video video descripcion descripcion libro"
+        "video video video descripcion descripcion libro"
+        "video video video descripcion descripcion libro"
+        "video video video descripcion descripcion comprar";
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        margin: 1rem;
+        height: 100vh;
+    }
+    .sinoptitle{
+        grid-area: titulo;
+        background-color: white;
+    }
+    .sinopinfo{
+        grid-area: info;
+        background-color: black;
+    }
+    .sinopinfo p{
+        color: white;
+        font-family: 'Marcellus', serif;
+        font-size: 30px;
+        text-align: justify;
+    }
+    .sinoplogo{
+        grid-area: logo;
+        background-color: black;
+    }
+    .sinoplogo img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        animation: girar 20s linear infinite;
+        background-color: transparent;
+    }
+    @keyframes girar{
+        from{}
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    .sinopvideo{
+        grid-area: video;
+        background-color: black;
+    }
+    .sinopvideo video{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .sinopdescription{
+        grid-area: descripcion;
+        background: linear-gradient(to bottom, rgb(245, 159, 21), black);
+    }
+    .buyphoto2{
+        grid-area: libro;
+        background-color: black;
+    }
+    .buyphoto2 img{
+        width: 100%;
+        height: auto;
+        object-fit: cover
+    }
+    .buylink2{
+        grid-area: comprar;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    /*universo*/
+    .universo{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo titulo titulo"
+        "referencias mapa mapa mapa nacion1 logo"
+        "referencias mapa mapa mapa nacion2 logo"
+        "referencias mapa mapa mapa nacion3 libro"
+        "referencias mapa mapa mapa nacion4 libro"
+        "referencias mapa mapa mapa nacion5 libro"
+        "referencias mapa mapa mapa nacion6 comprar";
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        margin: 1rem;
+        height: 100vh;
+    }
+    .universtitle{
+        grid-area: titulo;
+        background-color: white;
+    }
+    .universref{
+        grid-area: referencias;
+        background: linear-gradient(to bottom, rgb(245, 159, 21), black);
+    }
+    .universmap{
+        grid-area: mapa;
+        background-color: black;
+    }
+    .universmap img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: transparent;
+    }
+    .universlogo{
+        grid-area: logo;
+        background-color: black;
+    }
+    .universlogo img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        animation: girar 20s linear infinite;
+        background-color: transparent;
+    }
+    @keyframes girar{
+        from{}
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    .universnation1{
+        grid-area: nacion1;
+        background-color: black;
+    }
+    .universnation1 img{
+        width: 100%;
+    }
+    .universnation2{
+        grid-area: nacion2;
+        background-color: black;
+    }
+    .universnation2 img{
+        width: 100%;
+    }
+    .universnation3{
+        grid-area: nacion3;
+        background-color: black;
+    }
+    .universnation3 img{
+        width: 100%;
+    }
+    .universnation4{
+        grid-area: nacion4;
+        background-color: black;
+    }
+    .universnation4 img{
+        width: 100%;
+    }
+    .universnation5{
+        grid-area: nacion5;
+        background-color: black;
+    }
+    .universnation5 img{
+        width: 100%;
+    }
+    .universnation6{
+        grid-area: nacion6;
+        background-color: black;
+    }
+    .universnation6 img{
+        width: 100%;
+    }
+    .buyphoto3{
+        grid-area: libro;
+        background-color: black;
+    }
+    .buyphoto3 img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .buylink3{
+        grid-area: comprar;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    /*autor*/
+    .autor{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo titulo titulo"
+        "foto1 foto1 bio bio bio logo"
+        "foto1 foto1 bio bio bio logo"
+        "foto1 foto1 bio bio bio libro"
+        "foto1 foto1 bio bio bio libro"
+        "info info bio bio bio libro"
+        "info info bio bio bio comprar";
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        margin: 1rem;
+        height: 100vh;
+    }
+    .autortitle{
+        grid-area: titulo;
+        background-color: white;
+    }
+    .autorphoto1{
+        grid-area: foto1;
+        background-color: black;
+    }
+    .autorphoto1 img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .autorinfo{
+        grid-area: info;
+        background: linear-gradient(to bottom, rgb(245, 159, 21), black)
+    }
+    .bio{
+        grid-area: bio;
+        background-color: black;
+    }
+    .bio p{
+        color: white;
+        font-family: 'Marcellus', serif;
+        font-size: 28px;
+        text-align: justify;
+    }
+    .autorlogo{
+        grid-area: logo;
+    }
+    .autorlogo img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        animation: girar 20s linear infinite;
+        background-color: transparent;
+    }
+    @keyframes girar{
+        from{}
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    .buyphoto4{
+        grid-area: libro;
+        background-color: black;
+    }
+    .buyphoto4 img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .buylink4{
+        grid-area: comprar;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    /*contacto*/
+    .contacto{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo titulo titulo"
+        "foto info info info info logo"
+        "foto info info info info logo"
+        "empty empty box box empty2 libro"
+        "empty empty box box empty2 libro"
+        "empty empty box box empty2 libro"
+        "empty empty box box empty2 comprar";
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        margin: 1rem;
+        height: 100vh;
+    }
+    .contactitle{
+        grid-area: titulo;
+        background-color: white;
+    }
+    .contactlogo{
+        grid-area: logo;
+        background-color: black;
+    }
+    .empty{
+        grid-area: empty;
+        background-color: black;
+    }
+    .empty2{
+        grid-area: empty;
+        background-color: black;
+    }
+    .contactlogo img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        animation: girar 20s linear infinite;
+        background-color: transparent;
+    }
+    @keyframes girar{
+        from{}
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    .contactphoto{
+        grid-area: foto;
+        background-color: black;
+    }
+    .contactphoto img{
+        width: 100%;
+    }
+    .contactinfo{
+        grid-area: info;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 3rem;
+        font-family: 'Marcellus', serif;
+    }
+    .contactbox{
+        grid-area: box;
+        background-color: black;
+        color: white;
+        border-style: solid;
+        border-color: white;
+        border-width: 2px;
+        padding: 2rem;
+        padding-top: 0.5rem;
+        line-height: 2rem;
+        font-family: 'Marcellus', serif;
+    }
+    .form{
+        color: white;
+        padding: 0.5rem;
+        width: 4rem;
+        height: 2rem;
+        margin-top: 1rem;
+    }
+    .option{
+        background-color: white;
+        color: black;
+        width: 26rem;
+        height: 16rem;
+    }
+    .option0{
+        background-color: white;
+        color: black;
+    }
+    .option1{
+        background-color: white;
+        color: black;
+        margin-left: 1rem;
+        width: 12rem;
+    }
+    .option2{
+        background-color: white;
+        color: black;
+        margin-left: 1rem;
+        width: 20.9rem;
+    }
+    .option3{
+        background-color: white;
+        color: black;
+        margin-left: 1rem;
+        width: 16rem;
+        margin-bottom: 1rem;
+    }
+    .option4{
+        color: white;
+        margin-left: 0.6rem;
+    }
+    .buyphoto5{
+        grid-area: libro;
+        background-color: black;
+    }
+    .buyphoto5 img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .buylink5{
+        grid-area: comprar;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    /*pie de página*/
+    footer h2{
+        color: black;
+        background-color: rgb(245, 159, 21);
+        font-family: 'Cinzel', serif;
+    }
+    footer h3{
+        color: black;
+        background-color: rgb(245, 159, 21);
+        font-family: 'Marcellus', serif;
+    }
+    footer{
+        text-align: center;
+        width: 100%;
+        height: 10rem;
+        background-color: rgb(245, 159, 21);
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
+/*Resolución óptima para 1536px*/
+@media screen and (max-width: 1536px){
+    .principal{
+        max-width: 1536px;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo"
+        "portada portada portada portada"
+        "portada portada portada portada"
+        "portada portada portada portada"
+        "portada portada portada portada"
+        "portada portada portada portada"
+        "portada portada portada portada"
+        "frase frase frase logo"
+        "frase frase frase libro"
+        "frase frase frase libro"
+        "frase frase frase libro"
+        "frase frase frase libro"
+        "frase frase frase libro"
+        "frase frase frase comprar";
+        grid-template-rows: repeat(14, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        margin: 1rem;
+        height: 200vh;
+    }
+    .title1{
+        grid-area: titulo;
+        background-color: white;
+    }
+    .logo1{
+        grid-area: logo;
+        background-color: black;
+    }
+    .frase{
+        grid-area: frase;
+        background: linear-gradient(to bottom, rgb(245, 159, 21), black);
+    }
+    .illustration{
+        grid-area: portada;
+        background-color: black;
+    }
+    .illustration img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .logo1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .buyphoto{
+        grid-area: libro;
+        background-color: black;
+    }
+    .buyphoto img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center center;
+    }
+    .buylink{
+        grid-area: comprar;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
+/*Resolución óptima para 768px*/
+@media screen and (max-width: 768px){
+    .principal{
+        max-width: 768px;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "portada portada"
+        "portada portada"
+        "frase logo"
+        "frase libro"
+        "frase libro"
+        "frase libro"
+        "frase comprar";
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        margin: 1rem;
+        height: 200vh;
+    }
+    .title1{
+        grid-area: titulo;
+        background-color: white;
+    }
+    .logo1{
+        grid-area: logo;
+        background-color: black;
+    }
+    .frase{
+        grid-area: frase;
+        background: linear-gradient(to bottom, rgb(245, 159, 21), black);
+    }
+    .illustration{
+        grid-area: portada;
+        background-color: black;
+    }
+    .illustration img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .logo1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .buyphoto{
+        grid-area: libro;
+        background-color: black;
+    }
+    .buyphoto img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center center;
+    }
+    .buylink{
+        grid-area: comprar;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
+/*Resolución óptima para 500px*/
+@media screen and (max-width: 500px){
+    .principal{
+        max-width: 500px;
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "portada"
+        "portada"
+        "frase"
+        "logo"
+        "logo"
+        "logo"
+        "libro"
+        "libro"
+        "libro"
+        "libro"
+        "comprar";
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        margin: 1rem;
+        height: 200vh;
+    }
+    .title1{
+        grid-area: titulo;
+        background-color: white;
+    }
+    .logo1{
+        grid-area: logo;
+        background-color: black;
+    }
+    .frase{
+        grid-area: frase;
+        background: linear-gradient(to bottom, rgb(245, 159, 21), black);
+    }
+    .illustration{
+        grid-area: portada;
+        background-color: black;
+    }
+    .illustration img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .logo1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .buyphoto{
+        grid-area: libro;
+        background-color: black;
+    }
+    .buyphoto img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center center;
+    }
+    .buylink{
+        grid-area: comprar;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
